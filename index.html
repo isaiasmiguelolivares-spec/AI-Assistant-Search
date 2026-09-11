@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.A.R.V.I.S - AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="time" id="time">18:00</div>
+            <div class="system-status">
+                <span>ALL SYSTEMS NOMINAL</span>
+                <span>151</span>
+            </div>
+        </div>
+
+        <!-- Main Circle Interface -->
+        <div class="circle-container">
+            <div class="circle-wrapper">
+                <svg class="circle-ring" viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="90" class="ring-outer"/>
+                    <circle cx="100" cy="100" r="70" class="ring-middle"/>
+                    <circle cx="100" cy="100" r="50" class="ring-inner"/>
+                </svg>
+                
+                <div class="center-circle">
+                    <div class="glow"></div>
+                    <div class="pulse"></div>
+                    <span class="jarvis-text">J.A.R.V.I.S</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-container">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    class="search-input" 
+                    placeholder="Ask me anything..."
+                    autocomplete="off"
+                >
+                <button id="sendBtn" class="send-btn">
+                    <span class="btn-text">SEARCH</span>
+                    <span class="btn-glow"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Response Area -->
+        <div class="response-container">
+            <div class="response-title">RESPONSE</div>
+            <div class="response-content" id="response">
+                <span class="waiting">Aguardando consulta...</span>
+            </div>
+        </div>
+
+        <!-- Footer Status -->
+        <div class="footer-status">
+            <span class="status-item">
+                <span class="status-dot online"></span>
+                CONEXIÓN ACTIVA
+            </span>
+            <span class="status-item">
+                <span class="status-dot"></span>
+                BÚSQUEDA EN BACKGROUND
+            </span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
